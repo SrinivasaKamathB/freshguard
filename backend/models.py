@@ -63,7 +63,7 @@ class ScanRequest(BaseModel):
     text: str = Field(..., min_length=1, max_length=50000, description="Text to scan for factual currency")
     prompt: Optional[str] = Field(None, max_length=2000, description="Optional user prompt")
     tavily_api_key: Optional[str] = Field(None, max_length=150, description="Optional Tavily API key")
-    model_name: Optional[str] = Field("gemini-flash", max_length=100)
+    model_name: Optional[str] = Field("gpt-4o", max_length=100)
 
     @field_validator("tavily_api_key")
     @classmethod
